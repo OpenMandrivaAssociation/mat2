@@ -1,6 +1,6 @@
 Summary:	Metadata Anonymisation Toolkit
 Name:		mat2
-Version:	0.12.3
+Version:	0.13.0
 Release:	1
 License:	LGPLv3+
 Group:		File tools
@@ -9,8 +9,12 @@ Source0:	https://0xacab.org/jvoisin/%{name}/-/archive/%{version}/%{name}-%{versi
 #Source1:	https://0xacab.org/jvoisin/%{name}/uploads/289306e110d1425db0d3ce017065f73b/%{name}-%{version}.tar.gz.asc
 BuildArch:	noarch
 
-BuildRequires:	pkgconfig(python3)
+BuildRequires:	bubblewrap
+BuildRequires:	ffmpeg-devel
+BuildRequires:	imagemagick
+BuildRequires:	librsvg
 BuildRequires:	perl(Image::ExifTool)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	python3dist(mutagen)
 BuildRequires:	python3dist(pycairo)
 BuildRequires:	python3dist(setuptools)
@@ -18,10 +22,6 @@ BuildRequires:	pkgconfig(gdk-pixbuf-2.0)
 BuildRequires:	pkgconfig(librsvg-2.0)
 BuildRequires:	pkgconfig(poppler-glib)
 BuildRequires:	%{_lib}rsvg-gir2.0
-BuildRequires:	ffmpeg-devel
-BuildRequires:	bubblewrap
-BuildRequires:	imagemagick
-BuildRequires:	librsvg
 
 Requires:	bubblewrap
 Requires:	perl-Image-ExifTool
