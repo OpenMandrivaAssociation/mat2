@@ -1,6 +1,6 @@
 Summary:	Metadata Anonymisation Toolkit
 Name:		mat2
-Version:	0.13.0
+Version:	0.13.1
 Release:	1
 License:	LGPLv3+
 Group:		File tools
@@ -57,7 +57,6 @@ Nautilus, the default file manager of GNOME.
 %{_iconsdir}/hicolor/*/apps/%{name}.{png,svg}
 %{_datadir}/pixmaps/%{name}.xpm
 %{_datadir}/kservices5/ServiceMenus/%{name}.desktop
-%{_datadir}/nautilus-python/extensions/%{name}.py
 %{_mandir}/man1/%{name}.1.*
 
 #----------------------------------------------------------------------------
@@ -91,9 +90,6 @@ install -pm 0644 data/%{name}.svg %{buildroot}%{_iconsdir}/hicolor/scalable/apps
 # 	dolphin 
 install -dm 0755 %{buildroot}%{_datadir}/kservices5/ServiceMenus/
 install -pm 0755 dolphin/mat2.desktop %{buildroot}%{_datadir}/kservices5/ServiceMenus/
-#	nautilus
-install -dm 0755 %{buildroot}%{_datadir}/nautilus-python/extensions/
-install -pm 0755 nautilus/mat2.py %{buildroot}%{_datadir}/nautilus-python/extensions/
 
 # manual
 install -dm 0755 %{buildroot}%{_mandir}/man1/
@@ -101,5 +97,4 @@ install -pm 0644 doc/%{name}.1 %{buildroot}%{_mandir}/man1/
 
 %check
 # run tests
-PYTHONPATH=%{buildroot}%{py_sitedir} %python -m unittest discover -v || :
-
+PYTHONPATH=%{buildroot}%{py_sitedir} python -m unittest discover -v || :
