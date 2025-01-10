@@ -22,7 +22,7 @@ BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	pkgconfig(gdk-pixbuf-2.0) 
 BuildRequires:	pkgconfig(librsvg-2.0)
 BuildRequires:	pkgconfig(poppler-glib)
-BuildRequires:	%{_lib}rsvg-gir2.0
+BuildRequires:	typelib(Rsvg)
 
 Requires:	bubblewrap
 Requires:	perl-Image-ExifTool
@@ -54,7 +54,7 @@ Nautilus, the default file manager of GNOME.
 %doc doc/threat_model.md
 %{_bindir}/%{name}
 %{py_sitedir}/lib%{name}/
-%{py_sitedir}/%{name}-%{version}-py%{python_version}.egg-info/
+%{py_sitedir}/%{name}-%{version}.dist-info/
 %{_iconsdir}/hicolor/*/apps/%{name}.{png,svg}
 %{_datadir}/pixmaps/%{name}.xpm
 %{_datadir}/kservices5/ServiceMenus/%{name}.desktop
