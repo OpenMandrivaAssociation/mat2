@@ -15,9 +15,10 @@ BuildRequires:	imagemagick
 BuildRequires:	librsvg
 BuildRequires:	perl(Image::ExifTool)
 BuildRequires:	pkgconfig(python3)
-BuildRequires:	python3dist(mutagen)
-BuildRequires:	python3dist(pycairo)
-BuildRequires:	python3dist(setuptools)
+BuildRequires:	python%{pyver}dist(pygobject)
+BuildRequires:	python%{pyver}dist(mutagen)
+BuildRequires:	python%{pyver}dist(pycairo)
+BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	pkgconfig(gdk-pixbuf-2.0) 
 BuildRequires:	pkgconfig(librsvg-2.0)
 BuildRequires:	pkgconfig(poppler-glib)
