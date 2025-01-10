@@ -1,6 +1,6 @@
 Summary:	Metadata Anonymisation Toolkit
 Name:		mat2
-Version:	0.13.1
+Version:	0.13.5
 Release:	1
 License:	LGPLv3+
 Group:		File tools
