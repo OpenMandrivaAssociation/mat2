@@ -1,7 +1,7 @@
 Summary:	Metadata Anonymisation Toolkit
 Name:		mat2
 Version:	0.13.5
-Release:	3
+Release:	4
 License:	LGPLv3+
 Group:		File tools
 URL:		https://mat.boum.org/
